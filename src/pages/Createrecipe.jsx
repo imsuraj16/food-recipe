@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { nanoid } from "nanoid";
+import { recipecontext } from "../context/Recipecontext";
 
 const Createrecipe = () => {
+
+const [data,setData] = useContext(recipecontext)
+
   const {
     register,
     handleSubmit,
@@ -12,9 +16,12 @@ const Createrecipe = () => {
 
   const submitHandler = (data) => {
     data.id = nanoid();
-    console.log(data);
+    setData((prev)=>[...prev,data])
     reset()
   };
+
+  console.log(data);
+  
 
   return (
     <div className="">
@@ -63,7 +70,7 @@ const Createrecipe = () => {
         <br />
         <br />
         <button className="w-fit bg-green-800 px-4 py-2 rounded-md text-white">
-          Create Recipe
+          Save Recipe
         </button>
       </form>
     </div>
