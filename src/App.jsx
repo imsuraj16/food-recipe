@@ -1,10 +1,11 @@
 import React from 'react'
 import Mainroute from './routes/Mainroute'
 import Navabar from './components/Navabar'
+import Home from './pages/Home'
 
 const App = () => {
   return (
-    <div className='w-full h-full bg-[#DDEB9D] px-[5rem] py-[2rem] font-[Helvetica_Now_Display] flex flex-col gap-[5rem]'>
+    <div className='w-full min-h-screen bg-[#091513] font-[Helvetica_Now_Display] flex flex-col gap-[4rem] text-white'>
       <Navabar/>
       <Mainroute/>
     </div>
