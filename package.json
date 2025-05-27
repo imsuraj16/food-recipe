@@ -1,9 +1,12 @@
 {
   "name": "food-recipe",
   "private": true,
+  "homepage": "https://imsuraj16.github.io/food-recipe",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+     "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
